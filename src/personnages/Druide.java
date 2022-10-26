@@ -5,6 +5,7 @@ public class Druide {
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion = 1 ;
+	private Object potion;
 
 	
 	
@@ -13,16 +14,40 @@ public class Druide {
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
 		parler("Bonjour, je suis le druide " + nom + " et ma potion peut aller "
-				+ "d'une force " + effetPotionMin + " ‡ "+ effetPotionMax + ".");
+				+ "d'une force " + effetPotionMin + " ÔøΩ "+ effetPotionMax + ".");
 	}
 	public String getNom() {
 		return nom;
 	}
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "´ " + texte + "ª");
+		System.out.println(prendreParole() + "ÔøΩ " + texte + "ÔøΩ");
 	}
 	private String prendreParole() {
 		return "Le druide " + nom + " : ";
+	}
+	
+	public void preparerPotion()
+	{
+		this.potion =  Radom(effetPotionMax);
+	}
+	private Object Radom(int forcePotion) {
+		potion = forcePotion;
+		if (potion>7)
+		{
+			parler(" J'ai pr√©par√© une super potion de force");
+		}
+		else {
+			parler("Je n'ai pas trouv√© tous les ingr√©dients, ma potion est seulement de force");
+		}
+		
+		
+		
+		return null;
+	}
+	
+	
+	public static void main(String[] args) {
+		
 	}
 }
 
