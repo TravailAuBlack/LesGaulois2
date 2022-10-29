@@ -1,5 +1,8 @@
 package personnages;
 
+import personnages.Druide;
+import personnages.Romain;
+
 public class Gaulois {
 	private String nom;
 	private int force;
@@ -22,26 +25,30 @@ public class Gaulois {
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
-
+	
+	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force / 3);
+		romain.recevoirCoup((force / 3) * effetPotion);
 	}
 
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
+	
+	
+	public void boirePotion(int forcePotion) 
+	{
+		effetPotion = effetPotion + forcePotion ;
+		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée.");
+	}
+	
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Ast�rix", 8);
+		Gaulois asterix = new Gaulois("Astérix", 8);
 		System.out.println(asterix);
+		asterix.boirePotion(4);
 
-		// TODO cr�er un main permettant de tester la classe Gaulois
-	}
-
-	private static Object newGaulois(String string, int i) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
