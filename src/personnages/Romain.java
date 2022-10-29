@@ -3,6 +3,11 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
+	private Equipement[] equipement;
+	private int nbEquipement;
+	
+	
+	
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
@@ -27,5 +32,23 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
+<<<<<<< HEAD
 
+=======
+	
+	
+	
+	
+	
+	public static void main(String[] args ) {
+		Romain minus  = new Romain ("Minus",6);
+		minus.nom = "minus";
+		minus.force = 6;
+		System.out.println(Equipement.CASQUE);
+		System.out.println(Equipement.BOUCLIER);
+	}
+	
+
+		
+>>>>>>> dce47e27269b5126afd52db364cf61623187f56d
 }
