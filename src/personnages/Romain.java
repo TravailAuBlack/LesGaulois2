@@ -140,12 +140,12 @@ public class Romain {
 		minus.force = 6;
 		System.out.println(minus);
 		System.out.println(minus.prendreParole());
-		System.out.println(Equipement.CASQU);
+		System.out.println(Equipement.CASQUE);
 		System.out.println(Equipement.BOUCLIER);
-		minus.sEquiper(Equipement.CASQU);
-		minus.sEquiper(Equipement.CASQU);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.CASQUE);
 		minus.sEquiper(Equipement.BOUCLIER);
-		minus.sEquiper(Equipement.CASQU);
+		minus.sEquiper(Equipement.CASQUE);
 
 	}
 
